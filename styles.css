@@ -1,0 +1,277 @@
+/* Estilos generales */
+
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+}
+.nav__cl{
+    font-size: 18px;
+  letter-spacing: 2px;
+  padding: 18px 36px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; 
+}
+.nav__cl:after {
+        content: '';
+        position: absolute;
+        width:100%;
+        height:100%;
+        z-index: -1;
+        transition: all 0.4s ease-in-out;
+      
+}
+.nav__cl:after {
+    top:-50%;
+    left:-50%;
+    width: 200%;
+    height: 200%;
+    border-radius:50%;
+    transform: scale(0); 
+  }
+  .nav__cl:hover:after {
+    transform: scale(1);
+  }
+
+nav ul li a:hover {
+    background-color: rosybrown;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Estilos específicos de las secciones */
+#hero {
+    background-image: url("https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px;
+}
+
+#nosotros {
+    background-color: #f9f9f9;
+    padding: 40px;
+}
+
+#nosotros .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+}
+
+#nosotros .left img {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+#nosotros .right h3 {
+display:flex ;
+    justify-content: center;
+    align-items: center;
+}
+#nosotros .right h3  {
+    text-align: center;
+}
+
+
+#servicios {
+    padding: 40px;
+}
+
+#servicios .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#servicios .service {
+    text-align: center;
+}
+
+#servicios .service img {
+    max-width: 100%;
+    height: auto;
+}
+
+#galeria {
+    padding: 40px;
+    text-align: center;
+}
+
+#galeria .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+#galeria .gallery img {
+    max-width: 100%;
+    height: auto;
+}
+
+#blog {
+    background-color: #f9f9f9;
+    padding: 40px;
+}
+
+#blog .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#blog .post {
+    text-align: center;
+}
+
+#blog .post img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+#contacto {
+    padding: 40px 0;
+  }
+  
+  #contacto h2 {
+    color: #333;
+  }
+  
+  .contacto__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .contacto__form {
+    flex-basis: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .contacto__form input,
+  .contacto__form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contacto__form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contacto__map {
+    flex-basis: 490px;
+  }
+  
+  .contacto__map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    margin-top: -4em;
+    margin-left: -116px ;
+  }
+  
+  /* Estilos responsivos */
+  @media screen and (max-width: 600px) {
+    .contacto__form,
+    .contacto__map {
+      flex-basis: 100%;
+    }
+  }
+
+
+
+
+
+#contacto .contacto__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contacto form input,
+#contacto form textarea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 75px;
+    margin-bottom: 30px;
+    width: 100%;
+    margin-left: 166px;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .service,
+    .post {
+        margin-bottom: 40px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
